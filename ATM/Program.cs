@@ -32,8 +32,7 @@
                 if (selectedCostumer == null)
                 {
                     Console.WriteLine("Invalid credentials");
-                    Main(args);
-                    return;
+                    continue;
                 }
 
                 Console.WriteLine("Select an option:\n1. Deposit\n2. Withdraw\n3. Check Balance");
