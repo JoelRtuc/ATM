@@ -1,0 +1,23 @@
+[33mcommit 983a847adeacf5eff47c4ebabe9f8faccc4f155a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Joel Ringh <joel.ringh@gmail.com>
+Date:   Fri Sep 19 18:07:41 2025 +0200
+
+    Accidentally pulled before pushing. Pushing new commit
+
+[33mcommit c73c43d3bb4aeaec12dace084baf013ec64ad1f6[m
+Author: JoelRtuc <joel.ringh.syne25lin@edu.tucsweden.se>
+Date:   Fri Sep 19 18:04:08 2025 +0200
+
+    Create README.md
+
+[33mcommit d69df38ffa6af0e61953dd861459e1b00e484d8f[m
+Author: Joel Ringh <joel.ringh@gmail.com>
+Date:   Thu Sep 18 14:59:29 2025 +0200
+
+    Add project files.
+
+[33mcommit 029d3a6d2a5e4407c113b9be489fc671de5395f3[m
+Author: Joel Ringh <joel.ringh@gmail.com>
+Date:   Thu Sep 18 14:59:27 2025 +0200
+
+    Add .gitattributes and .gitignore.
