@@ -57,7 +57,9 @@
                         selectedCostumer.CheckBalance();
                         break;
                     default:
-                        break;
+                        Console.WriteLine("Invalid option");
+                        continue;
+
                 }
             }
 
