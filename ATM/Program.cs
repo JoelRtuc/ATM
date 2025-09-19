@@ -35,7 +35,7 @@
                     continue;
                 }
 
-                Console.WriteLine("Select an option:\n1. Deposit\n2. Withdraw\n3. Check Balance");
+                Console.WriteLine("Select an option:\n1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit");
 
                 int selectedOption = int.TryParse(Console.ReadLine(), out selectedOption) ? selectedOption : 0;
 
@@ -55,6 +55,10 @@
                         break;
                     case 3:
                         selectedCostumer.CheckBalance();
+                        break;
+                    case 4:
+                        Console.WriteLine("Have a nice day");
+                        Environment.Exit(0);
                         break;
                     default:
                         Console.WriteLine("Invalid option");
