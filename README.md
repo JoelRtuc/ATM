@@ -8,6 +8,7 @@
 - `4`: Exit with message.
 
 ## Code Overview
+- Uses OOP because of incapsulation of variables and the instantiation of the costumer objects
 ### `Costumer` Class
 The `Costumer` class represents a bank customer and includes the following:
 - **Properties**:
