@@ -12,6 +12,16 @@ namespace ATM
         string name;//ALWAYS USE LOWERCASE 
         double balance;
 
+        public int Pin
+        {
+            get { return pin; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+        }
+
         public Costumer()
         {
             this.pin = 0;
@@ -28,7 +38,7 @@ namespace ATM
 
         public Costumer ActivateAccount(int pin, string name)
         {
-            if(pin == this.pin && name == this.name)
+            if(pin == Pin && name == Name)
             {
                 return this;
             }
