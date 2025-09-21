@@ -10,7 +10,7 @@ namespace ATM
     {
         int pin;
         string name;//ALWAYS USE LOWERCASE 
-        double balance;
+        decimal balance;
 
         public int Pin
         {
@@ -22,6 +22,11 @@ namespace ATM
             get { return name; }
         }
 
+        public decimal Balance
+        {
+            get { return balance; }
+        }
+
         public Costumer()
         {
             this.pin = 0;
@@ -29,7 +34,7 @@ namespace ATM
             this.balance = 0;
         }
 
-        public Costumer(int pin, string name, double balance)
+        public Costumer(int pin, string name, decimal balance)
         {
             this.pin = pin;
             this.name = name;
@@ -48,12 +53,12 @@ namespace ATM
             }
         }
 
-        public void Deposit(double amount)
+        public void Deposit(decimal amount)
         {
             balance += amount;
         }
 
-        public void Withdraw(double amount)
+        public void Withdraw(decimal amount)
         {
             if (amount > balance || amount < 0)
             {
@@ -67,7 +72,7 @@ namespace ATM
 
         public void CheckBalance()
         {
-            Console.WriteLine($"Your balance is: {balance}");
+            Console.WriteLine($"Your balance is: {Balance}");
         }
     }
 }

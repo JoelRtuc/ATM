@@ -9,8 +9,8 @@
             List<Costumer> costumers = new List<Costumer>();
             Costumer selectedCostumer = new Costumer();
 
-            costumers.Add(new Costumer(1234, "john doe", 1000.0));
-            costumers.Add(new Costumer(1235, "jane doe", 2000.0));
+            costumers.Add(new Costumer(1234, "john doe", 1000.0m));
+            costumers.Add(new Costumer(1235, "jane doe", 2000.0m));
 
             while (true)
             {
@@ -43,13 +43,13 @@
                 {
                     case 1:
                         Console.WriteLine("Enter amount to deposit:");
-                        double depositAmount = double.TryParse(Console.ReadLine(), out depositAmount) ? depositAmount : 0;
+                        decimal depositAmount = decimal.TryParse(Console.ReadLine(), out depositAmount) ? depositAmount : 0;
                         selectedCostumer.Deposit(depositAmount);
                         Console.WriteLine("Deposit successful");
                         break;
                     case 2:
                         Console.WriteLine("Enter amount to withdraw:");
-                        double withdrawAmount = double.TryParse(Console.ReadLine(), out withdrawAmount) ? withdrawAmount : 0;
+                        decimal withdrawAmount = decimal.TryParse(Console.ReadLine(), out withdrawAmount) ? withdrawAmount : 0;
                         selectedCostumer.Withdraw(withdrawAmount);
                         Console.WriteLine("Withdrawal successful");
                         break;
