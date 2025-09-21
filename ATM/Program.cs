@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            int pin;
+            int pin, socialSecurity;
             string name;
             List<Costumer> costumers = new List<Costumer>();
             Costumer selectedCostumer = new Costumer();
 
-            costumers.Add(new Costumer(1234, "john doe", 1000.0m));
-            costumers.Add(new Costumer(1235, "jane doe", 2000.0m));
+            costumers.Add(new Costumer(1234, "john doe", 1000.0m, 12345));
+            costumers.Add(new Costumer(1235, "jane doe", 2000.0m, 12346));
 
             while (true)
             {
@@ -18,10 +18,12 @@
                 pin = int.TryParse(Console.ReadLine(), out pin) ? pin : 0;
                 Console.WriteLine("Enter Name");
                 name = Console.ReadLine();
+                Console.WriteLine("Enter Social Security Number");
+                socialSecurity = int.TryParse(Console.ReadLine(), out socialSecurity) ? socialSecurity : 0;
 
                 foreach (Costumer costumer in costumers)
                 {
-                    selectedCostumer = costumer.ActivateAccount(pin, name.ToLower());
+                    selectedCostumer = costumer.ActivateAccount(pin, name.ToLower(), socialSecurity);
 
                     if (selectedCostumer != null)
                     {

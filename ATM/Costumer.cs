@@ -8,7 +8,7 @@ namespace ATM
 {
     internal class Costumer
     {
-        int pin;
+        int pin, socialSecurity;
         string name;//ALWAYS USE LOWERCASE 
         decimal balance;
 
@@ -27,23 +27,30 @@ namespace ATM
             get { return balance; }
         }
 
+        public int SocialSecurity
+        {
+            get { return socialSecurity; }
+        }
+
         public Costumer()
         {
             this.pin = 0;
             this.name = "";
             this.balance = 0;
+            socialSecurity = 0;
         }
 
-        public Costumer(int pin, string name, decimal balance)
+        public Costumer(int pin, string name, decimal balance, int socialSecurity)
         {
             this.pin = pin;
             this.name = name;
             this.balance = balance;
+            this.socialSecurity = socialSecurity;
         }
 
-        public Costumer ActivateAccount(int pin, string name)
+        public Costumer ActivateAccount(int pin, string name, int socialSecurity)
         {
-            if(pin == Pin && name == Name)
+            if(pin == Pin && name == Name && socialSecurity == SocialSecurity)
             {
                 return this;
             }
@@ -60,7 +67,7 @@ namespace ATM
 
         public void Withdraw(decimal amount)
         {
-            if (amount > balance || amount < 0)
+            if (amount > Balance || amount < 0)
             {
                 Console.WriteLine("Insufficient funds");
             }
